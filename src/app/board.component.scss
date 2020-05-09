@@ -1,0 +1,79 @@
+.mat-app-background {
+  background-color: white;
+  display: block;
+  margin: 20px auto;
+  width: 400px;
+
+  .btn-new-game {
+    margin: 20px auto;
+  }
+
+  .mat-grid-list {
+    height: 400px;
+
+    .mat-grid-tile {
+      display: block;
+    }
+
+    .circle {
+      width: 25px;
+      background-color: #69b8f1;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .holder {
+      border: 1px solid #69b8f1;
+      border-radius: 50%;
+    }
+
+  }
+
+}
+
+.mat-expansion-panel  {
+  margin: 30px auto;
+  width: 40%;
+  background-color: #e0dcdc;
+
+  .mat-expansion-panel-header {
+    font-size: 14px;
+  }
+  .mat-expansion-panel-content,
+  .mat-list-text, .mat-list-item-content, .mat-line {
+    font-size: 12px;
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .mat-app-background {
+    width: 100%;
+  }
+
+  .mat-expansion-panel  {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .mat-expansion-panel-header {
+    font-size: 14px;
+  }
+
+  .mat-expansion-panel-content,
+  .mat-list-item-content,
+  .mat-list-text,
+  .mat-line {
+    font-size: 12px;
+    overflow: auto;
+    white-space: pre-wrap;
+  }
+}
+
+
+
+
+
+

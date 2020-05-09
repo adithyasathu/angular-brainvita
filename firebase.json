@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/angular-brainvita",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
