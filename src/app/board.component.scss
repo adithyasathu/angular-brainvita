@@ -5,7 +5,7 @@
   width: 400px;
 
   .btn-new-game {
-    margin: 20px auto;
+    margin: 20px 10px;
   }
 
   .mat-grid-list {
@@ -33,14 +33,21 @@
 
 .mat-expansion-panel  {
   margin: 30px auto;
-  width: 40%;
+  width: 60%;
   background-color: #e0dcdc;
 
   .mat-expansion-panel-header {
     font-size: 14px;
   }
+
+  .mat-list-item {
+    height: auto;
+  }
+
   .mat-expansion-panel-content,
-  .mat-list-text, .mat-list-item-content, .mat-line {
+  .mat-list-item-content,
+  .mat-list-text,
+  .mat-line {
     font-size: 12px;
     overflow: auto;
     white-space: pre-wrap;

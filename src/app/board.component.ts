@@ -39,10 +39,10 @@ export class BoardComponent implements OnInit, OnDestroy {
    */
   move(event: {previous: number, current: number}) {
     const { previous, current} = event;
-    console.log('event ', event);
     // check for legal move
     if (!this.unavailableTiles.includes(previous) &&
           this.emptyTiles.includes(current) &&
+            !this.emptyTiles.includes((previous + current) / 2) &&
             ( Math.abs(previous - current) === 2 || Math.abs(previous - current) === 14)) {
       // X-X-O ==> O-O-X
       this.emptyTiles[this.emptyTiles.indexOf(current)] = previous; // clear the moving item space

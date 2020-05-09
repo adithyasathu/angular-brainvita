@@ -17,7 +17,6 @@ export class DragDropDirective {
 
   @HostListener('dragstart', ['$event'])
   onDragStart(event) {
-    console.log('dragstart event ', event);
     event.dataTransfer.setData('previousIndex', event.target.id);
   }
 
@@ -29,7 +28,6 @@ export class DragDropDirective {
 
   @HostListener('drop', ['$event'])
   onDrop(event) {
-    console.log('drop event ', event.dataTransfer.getData('previousIndex'));
     this.ondrag.emit({
       previous: +event.dataTransfer.getData('previousIndex'),
       current: +event.currentTarget.id

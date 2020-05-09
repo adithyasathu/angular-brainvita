@@ -46,7 +46,6 @@ describe('BoardComponent', () => {
 
   it(`should allow legal move `, async () => {
     const fixture = TestBed.createComponent(BoardComponent);
-    const app = fixture.componentInstance;
     fixture.detectChanges();
     // simulate drag event
     const endingNode = fixture.nativeElement.querySelector('[id=\'25\']');
@@ -61,7 +60,6 @@ describe('BoardComponent', () => {
 
   it(`should not allow illegal moves`, async () => {
     const fixture = TestBed.createComponent(BoardComponent);
-    const app = fixture.componentInstance;
     fixture.detectChanges();
     // simulate drag event
     const endingNode = fixture.nativeElement.querySelector('[id=\'23\']');
@@ -71,6 +69,25 @@ describe('BoardComponent', () => {
     fixture.detectChanges();
     expect(fixture.nativeElement.querySelector('[id=\'25\']').classList.contains('circle')).toBe(false);
     expect(fixture.nativeElement.querySelector('[id=\'23\']').classList.contains('circle')).toBe(true);
+    expect(fixture.nativeElement.querySelector('[id=\'39\']').classList.contains('circle')).toBe(true);
+  });
+
+
+  it(`should not allow illegal moves when jumping over empty space`, async () => {
+    const fixture = TestBed.createComponent(BoardComponent);
+    const app = fixture.componentInstance;
+    fixture.detectChanges();
+    app.emptyTiles = [25, 32];
+    fixture.detectChanges();
+    // simulate drag event
+    const endingNode = fixture.nativeElement.querySelector('[id=\'25\']');
+    const dataItem = new DataTransfer();
+    dataItem.setData('previousIndex', '39');
+    endingNode.dispatchEvent(new DragEvent('drop', {bubbles: true, dataTransfer: dataItem}));
+    fixture.detectChanges();
+    // expect no change to the board as that was not legal move
+    expect(fixture.nativeElement.querySelector('[id=\'25\']').classList.contains('circle')).toBe(false);
+    expect(fixture.nativeElement.querySelector('[id=\'32\']').classList.contains('circle')).toBe(false);
     expect(fixture.nativeElement.querySelector('[id=\'39\']').classList.contains('circle')).toBe(true);
   });
 
