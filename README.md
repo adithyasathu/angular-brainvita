@@ -1,6 +1,8 @@
 # Brainvita (Peg Solitaire) - The Game
+[![Build Status](https://travis-ci.org/adithyasathu/angular-brainvita.svg?branch=master)](https://travis-ci.org/adithyasathu/angular-brainvita)
+[![codecov](https://codecov.io/gh/adithyasathu/angular-brainvita/branch/master/graph/badge.svg)](https://codecov.io/gh/adithyasathu/angular-brainvita)
 
-A Simple single player game created to kill the boredom.
+Brainvita (Peg Solitaire) - Simple and popular single player game to kill the boredom
 
 **Rules of the game**
 

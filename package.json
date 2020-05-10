@@ -1,7 +1,7 @@
 {
   "name": "angular-brainvita",
   "version": "1.0.0",
-  "description": "Brainvita (Peg Solitaire)",
+  "description": "Brainvita (Peg Solitaire) - Simple and popular single player game to kill the boredom",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
