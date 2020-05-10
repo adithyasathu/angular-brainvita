@@ -4,6 +4,10 @@
   margin: 20px auto;
   width: 400px;
 
+  .mat-toolbar {
+    border-radius: 16px;
+  }
+
   .btn-new-game {
     margin: 20px 10px;
   }
@@ -33,7 +37,6 @@
 
 .mat-expansion-panel  {
   margin: 30px auto;
-  width: 60%;
   background-color: #e0dcdc;
 
   .mat-expansion-panel-header {
@@ -61,7 +64,6 @@
   }
 
   .mat-expansion-panel  {
-    width: 100%;
     margin: 10px auto;
   }
 

@@ -1,5 +1,9 @@
 <div class="mat-app-background">
+  <!-- Toolbar -->
+  <mat-toolbar color="primary">Brainvita (Peg Solitaire) Game</mat-toolbar>
+  <!-- New Game Button -->
   <button mat-raised-button class="btn-new-game" color="warn" (click)="startNewGame()">New Game</button>
+  <!-- Board -->
   <mat-grid-list cols="7" rowHeight="fit">
     <mat-grid-tile *ngFor="let tile of tiles| slice:1; let i = index"
                    [ngClass] = "{ 'circle': ( !unavailableTiles.includes(tile) && !this.emptyTiles.includes(tile)),
@@ -8,28 +12,34 @@
                    [id]="tile" boardDragDrop>
     </mat-grid-tile>
   </mat-grid-list>
+  <!-- Rules of game expansion -->
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Rules of the game
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+      <mat-list>
+        <mat-list-item>
+          <mat-icon matListIcon>chevron_right</mat-icon>
+          Move one marble over the other either horizontally or vertically onto empty space, no cheeky diagonal moves.
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>chevron_right</mat-icon>
+          A legal move clears the marble you jumped over. X-X-O becomes O-O-X (X is marble and O is empty place).
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>chevron_right</mat-icon>
+          Continue moving one marble over the other till you leave only ONE marble on the board.
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListIcon>chevron_right</mat-icon>
+          Struck with no moves ?? Use New Game to restart
+        </mat-list-item>
+      </mat-list>
+    </mat-panel-description>
+  </mat-expansion-panel>
 </div>
 
-<mat-expansion-panel>
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Rules of the game
-    </mat-panel-title>
-  </mat-expansion-panel-header>
-  <mat-panel-description>
-    <mat-list>
-      <mat-list-item>
-        <mat-icon matListIcon>chevron_right</mat-icon>
-        Move one marble over the other either horizontally or vertically, no cheeky diagonal moves.
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon matListIcon>chevron_right</mat-icon>
-        A legal move clears the marble you jumped over. X-X-O becomes O-O-X (X is marble and O is empty place).
-      </mat-list-item>
-      <mat-list-item>
-        <mat-icon matListIcon>chevron_right</mat-icon>
-        Continue moving one marble over the other till you leave only ONE marble on the board.
-      </mat-list-item>
-    </mat-list>
-  </mat-panel-description>
-</mat-expansion-panel>
+
