@@ -50,7 +50,10 @@ export class BoardComponent implements OnInit, OnDestroy {
       // check if we have a winner
       this.won = this.emptyTiles.length === 32;
       if (this.won) {
-        const snackBarRef = this.snackBar.open('Congratulations, You Won !!!', 'NEW GAME');
+        const snackBarRef = this.snackBar.open('Congratulations, You Won !!!', 'NEW GAME',{
+          // here specify the position
+          horizontalPosition: 'center'
+        });
         this.snackBar$ = snackBarRef.onAction().pipe(take(1)).subscribe(() => {
           this.startNewGame();
         });
