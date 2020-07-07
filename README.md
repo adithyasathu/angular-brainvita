@@ -4,6 +4,8 @@
 
 Brainvita (Peg Solitaire) - Simple and popular single player game to kill the boredom
 
+**Demo** https://game-brainvita.web.app/
+
 **Rules of the game**
 
 * Move one marble over the other either horizontally or vertically onto empty space, no cheeky diagonal moves.
